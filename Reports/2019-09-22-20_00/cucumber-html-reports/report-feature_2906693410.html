@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Feature: Create and GET APIs verification using API chain</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CurrencyPay</td>
+              <td>1</td>
+            <td>22 Sep 2019, 21:00</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Create and GET APIs verification using API chain</td>
+          <td      class="passed"    >8</td>
+          <td      class="failed"    >1</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">9</td>
+
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="5205113805">5.205</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Create and GET APIs verification using API chain</span>
+  
+
+  </div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">5.205</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify that GetLatestRecords and GetRecordByID APIs are able to fetch record created by Create API</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-element-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">CommonSteps.setup(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.007</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I set create API request body for &quot;<span class="argument">CreateAPI_009</span>&quot;</span>
+  
+  <span class="lead-duration duration">1.158</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-4" class="collapse collapsable-details " >
+          
+          <pre><p>Base URI: http://ec2-34-250-139-60.eu-west-1.compute.amazonaws.com</p><p>Request Body: {&quot;country&quot;:&quot;UK&quot;,&quot;name&quot;:&quot;Smith Steve&quot;,&quot;risk&quot;:1,&quot;position&quot;:&quot;Developer&quot;,&quot;yob&quot;:1983}</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I set headers for create API request</span>
+  
+  <span class="lead-duration duration">0.100</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I send post request to create API</span>
+  
+  <span class="lead-duration duration">2.501</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-5">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-5" class="collapse collapsable-details " >
+          
+          <pre><p>Response Body: </p><p>{
+    &quot;id&quot;: &quot;5d87d2df0f06980f29f558d0&quot;,
+    &quot;message&quot;: &quot;Entity created successfully!&quot;,
+    &quot;ok&quot;: true
+}</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Create API should send status code as <span class="argument">201</span></span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-6" class="collapse collapsable-details " >
+          
+          <pre><p>Status code: 201</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Create Record API Response Body should be as expected</span>
+  
+  <span class="lead-duration duration">0.086</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I send get request to GetLatestRecords API for &quot;<span class="argument">CreateAPI_009</span>&quot;</span>
+  
+  <span class="lead-duration duration">0.721</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-7">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-7" class="collapse collapsable-details " >
+          
+          <pre><p>Base URI: http://ec2-34-250-139-60.eu-west-1.compute.amazonaws.com</p><p>[
+    {
+        &quot;country&quot;: &quot;UK&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T20:00:31.626218&quot;,
+        &quot;id&quot;: &quot;5d87d2df0f06980f29f558d0&quot;,
+        &quot;name&quot;: &quot;Smith Steve&quot;,
+        &quot;position&quot;: &quot;Developer&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 1983
+    },
+    {
+        &quot;country&quot;: &quot;UK&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T20:00:31.623206&quot;,
+        &quot;id&quot;: &quot;5d87d2df0f06980f29f558cf&quot;,
+        &quot;name&quot;: &quot;Eric Show&quot;,
+        &quot;position&quot;: &quot;CEO&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 1989
+    },
+    {
+        &quot;country&quot;: &quot;AU&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:27.091642&quot;,
+        &quot;id&quot;: &quot;5d87d2630f06980f29f558ce&quot;,
+        &quot;name&quot;: &quot;James&quot;,
+        &quot;position&quot;: &quot;Wood&quot;,
+        &quot;risk&quot;: 6,
+        &quot;yob&quot;: 1988
+    },
+    {
+        &quot;country&quot;: &quot;AU&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:26.449504&quot;,
+        &quot;id&quot;: &quot;5d87d2620f06980f29f558cd&quot;,
+        &quot;name&quot;: &quot;James&quot;,
+        &quot;position&quot;: &quot;Consultant&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 0
+    },
+    {
+        &quot;country&quot;: &quot;SA&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:25.790335&quot;,
+        &quot;id&quot;: &quot;5d87d2610f06980f29f558cc&quot;,
+        &quot;name&quot;: &quot;John Wood&quot;,
+        &quot;position&quot;: &quot;Assistant&quot;,
+        &quot;risk&quot;: 0,
+        &quot;yob&quot;: 1967
+    },
+    {
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:23.847254&quot;,
+        &quot;id&quot;: &quot;5d87d25f0f06980f29f558cb&quot;,
+        &quot;name&quot;: &quot;Jason Roy&quot;,
+        &quot;position&quot;: &quot;CTO&quot;,
+        &quot;risk&quot;: 2,
+        &quot;yob&quot;: 1988
+    },
+    {
+        &quot;country&quot;: &quot;UK&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:22.781680&quot;,
+        &quot;id&quot;: &quot;5d87d25e0f06980f29f558ca&quot;,
+        &quot;name&quot;: &quot;Smith Steve&quot;,
+        &quot;position&quot;: &quot;Developer&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 1983
+    },
+    {
+        &quot;country&quot;: &quot;UK&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:58:22.780340&quot;,
+        &quot;id&quot;: &quot;5d87d25e0f06980f29f558c9&quot;,
+        &quot;name&quot;: &quot;Eric Show&quot;,
+        &quot;position&quot;: &quot;CEO&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 1989
+    },
+    {
+        &quot;country&quot;: &quot;AU&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:36:23.933340&quot;,
+        &quot;id&quot;: &quot;5d87cd370f06980f29f558c8&quot;,
+        &quot;name&quot;: &quot;James&quot;,
+        &quot;position&quot;: &quot;Wood&quot;,
+        &quot;risk&quot;: 6,
+        &quot;yob&quot;: 1988
+    },
+    {
+        &quot;country&quot;: &quot;AU&quot;,
+        &quot;createdAt&quot;: &quot;2019-09-22T19:36:23.286775&quot;,
+        &quot;id&quot;: &quot;5d87cd370f06980f29f558c7&quot;,
+        &quot;name&quot;: &quot;James&quot;,
+        &quot;position&quot;: &quot;Consultant&quot;,
+        &quot;risk&quot;: 1,
+        &quot;yob&quot;: 0
+    }
+]</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Newly created record should be present in GetLatestRecords API response</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I send get request to GetRecordByID API for &quot;<span class="argument">CreateAPI_009</span>&quot;</span>
+  
+  <span class="lead-duration duration">0.630</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-8">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-8" class="collapse collapsable-details " >
+          
+          <pre><p>{
+    &quot;country&quot;: &quot;UK&quot;,
+    &quot;createdAt&quot;: &quot;2019-09-22T20:00:31.626218&quot;,
+    &quot;id&quot;: &quot;5d87d2df0f06980f29f558d0&quot;,
+    &quot;name&quot;: &quot;Smith Steve&quot;,
+    &quot;position&quot;: &quot;Developer&quot;,
+    &quot;risk&quot;: 1,
+    &quot;yob&quot;: 0
+}</p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">GetRecordByID API response should be as expected</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>org.junit.ComparisonFailure:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>org.junit.ComparisonFailure: yob element value is not as expected expected:&lt;[1983]&gt; but was:&lt;[0]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at com.business.GetRecordByIDAPI.verifyRecordDetails(GetRecordByIDAPI.java:23)
+	at com.stepDef.GetRecordByIDAPISteps.verify_response_body(GetRecordByIDAPISteps.java:46)
+	at &#10045;.GetRecordByID API response should be as expected(file:src/test/resources/features/APIChain.feature:12)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
